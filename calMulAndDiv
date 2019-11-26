@@ -1,0 +1,21 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+void calMulAndDiv(int, int, int&, int&);
+
+int main()
+{
+	int num1, num2, mul, div;
+	cout << "input 2 numbers\n";
+	cin >> num1 >> num2;
+
+	calMulAndDiv(num1, num2, mul, div);
+	cout << "num1 multiplied by num 2 is :" << mul << endl;
+	cout << "num1 divided by num 2 is :" << div << endl;
+}
+
+void calMulAndDiv(int tempIn, int temp, int& mul, int& div)
+{
+	mul = tempIn * temp;
+	div = tempIn / temp;
+}
