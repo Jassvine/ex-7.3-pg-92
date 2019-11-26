@@ -1,0 +1,15 @@
+#include "pch.h"
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int x1 = 1, x2 = -2, y1 = -3, y2 = 5, value1, value2, value3, pow1, pow2;
+	double d;
+
+	d = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+
+	cout << "the distance between the points are" << d << endl;
+
+}
