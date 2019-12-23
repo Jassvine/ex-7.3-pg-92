@@ -1,0 +1,36 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+void getData(int&, int&, int&);
+void calculate(double, double, double, double&);
+void displayAverageAcceleration(int, int, int, double);
+
+int main()
+{
+	int v0, v1, t;
+	double average=0;
+
+	getData(v0, v1, t);
+	double v0d=v0, v1d=v1, td=t;
+	calculate(v0d, v1d, td, average);
+	displayAverageAcceleration(v0, v1, t, average);
+	return 0;
+}
+void getData(int& x, int& y, int& z)
+{
+	cout << "pls input initial velocity" << endl;
+	cin >> x;
+	cout << "pls input final velocity" << endl;
+	cin >> y;
+	cout << "time taken in seconds" << endl;
+	cin >> z;
+}
+
+void calculate(double x, double y, double z, double& average)
+{
+	average = ((y - x) / z)-1;
+}
+void displayAverageAcceleration(int x, int y, int z, double average)
+{
+	cout << "the average acceleration needed to accelerate a car from " << x << "km/h to " << y << "km/h in " << z << "seconds is " << average << "m/s square " << endl;
+}
